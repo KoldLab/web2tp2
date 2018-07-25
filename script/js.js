@@ -64,7 +64,7 @@ $(document).ready(function(){
             document.getElementById("myTableGame").appendChild(y);
             for(var j=0; j < colonne;j++){ // each tr get<s his number od TDs
                 var z = document.createElement("TD");
-                z.setAttribute("id", numeroDeTile);
+                z.setAttribute("id", "T" + numeroDeTile);
                 var t = document.createElement("p"); // add an element p with the tile number
                 t.innerHTML = "" + numeroDeTile;
                 numeroDeTile++;
@@ -111,5 +111,13 @@ $(document).ready(function(){
 
     });
 
-});
+    $("tr").click(function(){
+        alert("hely");
+        /*tmpx = $(this).backgroundPositionX;
+        console.log("tmpx: " + tmpx);
+        $(this).backgroundPositionX = tmpx.slice(0, -1) + 50 + "%";
+        */
+        $("tr").style.background = "none";
+    });
 
+});
